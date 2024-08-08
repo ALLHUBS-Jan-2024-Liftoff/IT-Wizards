@@ -1,5 +1,6 @@
 package org.LaunchCode.IT_Wizards_API.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -10,6 +11,7 @@ public class Wishlist extends AbstractEntity{
     //Fields
     @ManyToOne
     @JoinColumn(name="user_id")
+    @JsonIgnore
     private User user;
 
     @ManyToOne
